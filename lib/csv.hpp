@@ -160,7 +160,12 @@ class CSV
             }
             else
             {
-                throw std::runtime_error("Error openning the input file!");
+                std::string error_text = "Error openning the input file in ";
+                error_text += __func__;
+                error_text += " method from ";
+                error_text += __FILE__;
+                error_text += " file!";
+                throw std::runtime_error(error_text.c_str());
             }
         }
 
@@ -198,7 +203,12 @@ class CSV
             }
             else
             {
-                throw std::runtime_error("Error creating the output file!");
+                std::string error_text = "Error creating the output file in ";
+                error_text += __func__;
+                error_text += " method from ";
+                error_text += __FILE__;
+                error_text += " file!";
+                throw std::runtime_error(error_text.c_str());
             }
         }
 
@@ -248,7 +258,12 @@ class CSV
             }
             else
             {
-                throw std::range_error("This cell does not exist!");
+                std::string error_text = "Error reading a cell in ";
+                error_text += __func__;
+                error_text += " method from ";
+                error_text += __FILE__;
+                error_text += " file: This cell does not exist!";
+                throw std::range_error(error_text.c_str());
             }
         }
 
@@ -269,7 +284,12 @@ class CSV
             }
             else
             {
-                throw std::range_error("This cell does not exist");
+                std::string error_text = "Error writing to a cell in ";
+                error_text += __func__;
+                error_text += " method from ";
+                error_text += __FILE__;
+                error_text += " file: This cell does not exist!";
+                throw std::range_error(error_text.c_str());
             }
         }
 
@@ -295,7 +315,12 @@ class CSV
             }
             else
             {
-                throw std::range_error("This column does not exist!");
+                std::string error_text = "Error reading a column in ";
+                error_text += __func__;
+                error_text += " method from ";
+                error_text += __FILE__;
+                error_text += " file: This column does not exist!";
+                throw std::range_error(error_text.c_str());
             }
         }
 
@@ -314,7 +339,12 @@ class CSV
             }
             else
             {
-                throw std::range_error("This row does not exist!");
+                std::string error_text = "Error reading a row in ";
+                error_text += __func__;
+                error_text += " method from ";
+                error_text += __FILE__;
+                error_text += " file: This row does not exist!";
+                throw std::range_error(error_text.c_str());
             }
         }
 
@@ -337,7 +367,12 @@ class CSV
             }
             else
             {
-                throw std::range_error("This column does not exist!");
+                std::string error_text = "Error writing to a column in ";
+                error_text += __func__;
+                error_text += " method from ";
+                error_text += __FILE__;
+                error_text += " file: This column does not exist!";
+                throw std::range_error(error_text.c_str());
             }
         }
 
@@ -357,7 +392,12 @@ class CSV
             }
             else
             {
-                throw std::range_error("This row does not exist!");
+                std::string error_text = "Error writing to a row in ";
+                error_text += __func__;
+                error_text += " method from ";
+                error_text += __FILE__;
+                error_text += " file: This row does not exist!";
+                throw std::range_error(error_text.c_str());
             }
         }
 
