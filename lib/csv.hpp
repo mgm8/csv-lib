@@ -21,13 +21,11 @@
  */
 
 /**
- * \file csv.hpp
- * 
  * \brief CSV library main class.
  * 
  * \author Gabriel Mariano Marcelino <gabriel.mm8@gmail.com>
  * 
- * \version 1.0-dev
+ * \version 1.0
  * 
  * \date 28/04/2018
  * 
@@ -47,8 +45,6 @@
 #include <stdexcept>
 
 /**
- * \class CSV
- *
  * \brief CSV library main class.
  */
 template <class TCell>
@@ -60,7 +56,7 @@ class CSV
         /**
          * \brief Class constructor without initiliazation.
          *
-         * \return None
+         * \return None.
          */
         CSV()
         {
@@ -70,10 +66,10 @@ class CSV
         /**
          * \brief Class constructor with table's size initialization.
          *
-         * \param cols is the number of columns of the CSV table.
-         * \param rows is the number of rows of the CSV table.
+         * \param[in] cols is the number of columns of the CSV table.
+         * \param[in] rows is the number of rows of the CSV table.
          *
-         * \return None
+         * \return None.
          */
         CSV(unsigned int cols, unsigned int rows)
         {
@@ -91,11 +87,11 @@ class CSV
         }
 
         /**
-         * \brief Class constructor ().
+         * \brief Class constructor with file initialization.
          *
-         * \param in_file
+         * \param[in] in_file is the CSV file to read.
          *
-         * \return None
+         * \return None.
          */
         CSV(const char *in_file)
         {
@@ -105,7 +101,7 @@ class CSV
         /**
          * \brief Class destructor.
          *
-         * \return None
+         * \return None.
          */
         ~CSV()
         {
@@ -115,9 +111,9 @@ class CSV
         /**
          * \brief Reads a CSV table from a CSV file.
          *
-         * \param file is the CSV file to read.
+         * \param[in] file is the CSV file to read.
          *
-         * \return None
+         * \return None.
          */
         void Read(const char *file)
         {
@@ -172,9 +168,9 @@ class CSV
         /**
          * \brief Write the CSV table to a file.
          *
-         * \param file is the file to write the CSV table.
+         * \param[in] file is the file to write the CSV table.
          *
-         * \return None
+         * \return None.
          */
         void Write(const char *file)
         {
@@ -215,7 +211,7 @@ class CSV
         /**
          * \brief Clears the CSV table (delete all its contents and set the size to zero).
          *
-         * \return None
+         * \return None.
          */
         void Clear()
         {
@@ -245,8 +241,8 @@ class CSV
         /**
          * \brief Reads a cell from the CSV table.
          *
-         * \param col is the column of the cell.
-         * \param row is the row of the cell.
+         * \param[in] col is the column of the cell.
+         * \param[in] row is the row of the cell.
          *
          * \return The given cell content.
          */
@@ -270,11 +266,11 @@ class CSV
         /**
          * \brief Writes to a cell from the CSV table.
          *
-         * \param col is the columns of the cell.
-         * \param row is the row of the cell.
-         * \parma val is the data to write into the cell.
+         * \param[in] col is the columns of the cell.
+         * \param[in] row is the row of the cell.
+         * \parma[in] val is the data to write into the cell.
          *
-         * \return None
+         * \return None.
          */
         void WriteCell(unsigned int col, unsigned int row, TCell val)
         {
@@ -296,7 +292,7 @@ class CSV
         /**
          * \brief Reads of a column from the CSV table.
          *
-         * \param col is the column number to read
+         * \param[in] col is the column number to read
          *
          * \return The required column as a vector.
          */
@@ -327,7 +323,7 @@ class CSV
         /**
          * \brief Reads a row from the CSV table.
          *
-         * \param row is the row number to read.
+         * \param[in] row is the row number to read.
          *
          * \return The required row as a vector.
          */
@@ -351,10 +347,10 @@ class CSV
         /**
          * \brief Writes data to a column from the CSV table.
          *
-         * \parma pos is the column number to write.
-         * \param col is the column data to write.
+         * \parma[in] pos is the column number to write.
+         * \param[in] col is the column data to write.
          *
-         * \return None
+         * \return None.
          */
         void WriteColumn(unsigned int pos, std::vector<TCell> col)
         {
@@ -379,10 +375,10 @@ class CSV
         /**
          * \brief Writes data to a row from the CSV table.
          *
-         * \param pos is the row number to write.
-         * \param row is the row data to write.
+         * \param[in] pos is the row number to write.
+         * \param[in] row is the row data to write.
          *
-         * \return None
+         * \return None.
          */
         void WriteRow(unsigned int pos, std::vector<TCell> row)
         {
@@ -404,9 +400,9 @@ class CSV
         /**
          * \brief Appends a column to the end of the CSV table.
          *
-         * \param col is the column to append.
+         * \param[in] col is the column to append.
          *
-         * \return None
+         * \return None.
          */
         void AppendColumn(std::vector<TCell> col)
         {
@@ -419,9 +415,9 @@ class CSV
         /**
          * \brief Appends a row to the end of the CSV table.
          *
-         * \param row is the row to append.
+         * \param[in] row is the row to append.
          *
-         * \return None
+         * \return None.
          */
         void AppendRow(std::vector<TCell> row)
         {
@@ -431,8 +427,8 @@ class CSV
         /**
          * \brief cout overload.
          *
-         * \param os is the ostream object.
-         * \param csv is the CSV object.
+         * \param[in] os is the ostream object.
+         * \param[in] csv is the CSV object.
          *
          * \return An ostream object.
          */

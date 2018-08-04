@@ -21,13 +21,11 @@
  */
 
 /**
- * \file csvlib.h
- * 
  * \brief CSV library.
  * 
  * \author Gabriel Mariano Marcelino <gabriel.mm8@gmail.com>
  * 
- * \version 1.0-dev
+ * \version 1.0
  * 
  * \date 28/04/2018
  * 
